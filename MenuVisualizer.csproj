@@ -2,8 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageId>MenuVisualizer</PackageId>
+	<Version>0.1.1</Version>
+	<Authors>Maru1301</Authors>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+	<None Include="doc\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>

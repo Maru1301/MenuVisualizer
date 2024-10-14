@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MenuVisualizer</id>
+    <version>0.1.0</version>
+    <authors>Maru1301</authors>
+        <owners>Maru1301</owners>
+        <readme>doc\README.md</readme>
+    <description></description>
+    <repository type="git" commit="90194aee9cdf3a61c6369b049b6f15ae4df323ee" />
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\maru_lin\source\repos\MenuVisualizer\bin\Debug\net8.0\MenuVisualizer.dll" target="lib\net8.0\MenuVisualizer.dll" />
+    <file src="C:\Users\maru_lin\source\repos\MenuVisualizer\doc\README.md" target="\README.md" />
+  </files>
+</package>
