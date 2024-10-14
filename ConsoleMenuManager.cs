@@ -38,6 +38,7 @@ namespace MenuVisualizer
                             menu = subMenuOption.SubMenu!;
                         }
 
+                        Console.Clear();
                         optionPointer = 0;
                     }
 
