@@ -10,7 +10,7 @@ namespace MenuVisualizer
             this.menu = menu;
         }
 
-        public void Show()
+        public async Task ShowAsync()
         {
             Console.CursorVisible = false;
 
@@ -30,7 +30,7 @@ namespace MenuVisualizer
                     {
                         if(menu.Options[optionPointer] is FunctionOption funcOption)
                         {
-                            result = ExecuteOption(funcOption, result);
+                            result = await ExecuteOptionAsync(funcOption, result);
                             menu = funcOption.AfterFuncSubMenu ?? menu;
                         }
                         else if (menu.Options[optionPointer] is SubMenuOption subMenuOption)
@@ -96,9 +96,9 @@ namespace MenuVisualizer
             return optionPointer;
         }
 
-        private static object? ExecuteOption(FunctionOption option, object? input)
+        private static async Task<object?> ExecuteOptionAsync(FunctionOption option, object? input)
         {
-            var result = option.Func.DynamicInvoke(input);
+            var result = await option.Func.Invoke(input);
             Console.CursorVisible = false;
             Console.Clear();
 
