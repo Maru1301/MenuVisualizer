@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<PackageId>MenuVisualizer</PackageId>
-	<Version>0.1.5</Version>
+	<Version>0.2.0</Version>
 	<Authors>Maru1301</Authors>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<RepositoryUrl>https://github.com/Maru1301/MenuVisualizer</RepositoryUrl>
@@ -14,6 +14,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<None Include="doc\README.md" Pack="true" PackagePath="\"/>
+    <Compile Remove="MenuVisualizerTest\**" />
+    <EmbeddedResource Remove="MenuVisualizerTest\**" />
+    <None Remove="MenuVisualizerTest\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Include="doc\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

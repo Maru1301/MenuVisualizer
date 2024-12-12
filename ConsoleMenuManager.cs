@@ -58,6 +58,13 @@ namespace MenuVisualizer
         {
             Console.SetCursorPosition(0, 0);
             Console.WriteLine(menu.Name);
+            Console.WriteLine();
+
+            foreach(string desc in menu.Descriptions)
+            {
+                Console.WriteLine(desc);
+            }
+            Console.WriteLine();
 
             for (int i = 0; i < menu.Options.Count; i++)
             {
